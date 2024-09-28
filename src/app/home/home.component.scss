@@ -1,0 +1,68 @@
+.home-container {
+	text-align: center;
+	padding: 50px;
+	background-color: #eddcd9;
+  
+	h1 {
+	  font-size: 2.5rem;
+	  margin-bottom: 20px;
+	  color: #f53163;
+	}
+	h2 {
+		font-size: 1.5rem;
+		margin: 5px 0;
+		color: #555;
+	  }
+	 
+	  .profile-photo {
+		user-select: none; 
+		width: 200px; // Increased width
+		height: 200px; // Increased height to maintain circular shape
+		align-self: center;
+		border-radius: 50%; // Keep it circular
+		border: 5px solid #6d2c37; // Set border color and width
+		background-color: #f0f4f8; // Optional: background color behind the image
+		object-fit: cover; // Ensure the image covers the area properly
+		margin-bottom: 20px; // Add space below the photo
+		transition: transform 0.3s ease; // Smooth transform effect on hover
+	
+		&:hover {
+			transform: scale(1.05); // Scale up the photo slightly on hover
+		}
+	}
+	
+	
+	
+	.typing-text {
+		border-right: 2px solid black;
+		display: inline-block;
+		animation: blink 0.7s step-end infinite;
+	  
+		@keyframes blink {
+		  70% {
+			border-color: transparent;
+		  }
+		}
+	  }
+	  
+	p {
+	  font-size: 1.2rem;
+	  max-width: 600px;
+	  margin: 0 auto 20px;
+	}
+  
+	button {
+	  padding: 10px 20px;
+	  font-size: 1rem;
+	  background-color: #b6666f;
+	  color: white;
+	  border: none;
+	  border-radius: 5px;
+	  cursor: pointer;
+  
+	  &:hover {
+		background-color: #f53163;
+	  }
+	}
+  }
+  

@@ -1,0 +1,30 @@
+<div class="contact-container">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out for any inquiries, collaborations, or just to connect!</p>
+
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/umang-joshi-21a330256/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/joshiumang14" target="_blank">GitHub</a>
+        <a href="mailto:joshiumang311@gmail.com">Email</a>
+    </div>
+
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required ngModel>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required ngModel>
+        </div>
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required ngModel></textarea>
+        </div>
+        <div>
+            <button type="submit">Send Message</button>
+        </div>
+    </form>
+</div>
+
+<app-footer></app-footer> <!-- Include the footer here -->

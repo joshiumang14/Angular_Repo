@@ -14,7 +14,7 @@ export class ContactComponent {
   from_name:'',
   to_name:'Umang Joshi',
   from_email:'',
-  Message:''
+  message:''
   });
   constructor(private fb: FormBuilder){
 

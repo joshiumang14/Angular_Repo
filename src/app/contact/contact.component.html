@@ -1,3 +1,5 @@
+
+<div [formGroup]="form">
 <div class="contact-container">
     <h2>Contact Me</h2>
     <p>Feel free to reach out for any inquiries, collaborations, or just to connect!</p>
@@ -8,19 +10,22 @@
         <a href="mailto:joshiumang311@gmail.com">Email</a>
     </div>
 
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <!-- <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm"> -->
+        <form action="javascript:void(0)" (submit)="send()">
         <div>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required ngModel>
+            <input formControlName="from_name" type="text" id="name" name="name" required ngModel>
         </div>
         <div>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required ngModel>
+            <input formControlName="from_email" type="email" id="email" name="email" required ngModel>
         </div>
         <div>
             <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required ngModel></textarea>
+            <textarea formControlName="message" name="message" rows="4" required ngModel></textarea>
         </div>
+
+
         <div>
             <button type="submit">Send Message</button>
         </div>
